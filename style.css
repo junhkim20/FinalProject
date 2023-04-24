@@ -8,6 +8,7 @@ body {
 	text-align: center;
 	font-size: 7vw;
 	text-decoration: underline;
+	padding-bottom: 10vh;
 }
 
 .title {
@@ -19,7 +20,14 @@ body {
 	flex-direction: column;
 }
 
-.fact {
+.fact1 {
 	width: 40vw;
-	padding-left: 10vw;
+	padding-left: 15vw;
+	padding-bottom: 5vh;
+}
+
+.fact2 {
+	width: 40vw;
+	padding-left: 48vw;
+	padding-bottom: 5vh;
 }
