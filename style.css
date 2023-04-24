@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
+
+body {
+	font-family: 'Share Tech', sans-serif;
+}
+
+.maintitle {
+	text-align: center;
+	font-size: 7vw;
+	text-decoration: underline;
+}
+
+.title {
+	font-size: 4vw;
+}
+
+.maincontainer {
+	display: flex;
+	flex-direction: column;
+}
+
+.fact {
+	width: 40vw;
+	padding-left: 10vw;
+}
