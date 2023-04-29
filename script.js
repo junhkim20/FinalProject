@@ -27,7 +27,38 @@ let factsJSON = [
 
 ];
 
-function mainDisplay() {
+let resourceJSON = [
+	{
+		"resourceTitle": "Social Media Addiction: Signs, Symptoms & Treatments",
+		"href": "https://www.choosingtherapy.com/social-media-addiction/"
+	},
+	{
+		"resourceTitle": "Social Media Addiction: The Impact On Mental Health",
+		"href": "https://addictionresource.com/addiction/social-media/"
+	},
+	{
+		"resourceTitle": "Treatment For Social Media Addiction",
+		"href": "https://www.addictioncenter.com/drugs/social-media-addiction/treatment/"
+	},
+	{
+		"resourceTitle": "Social Media Addiction Help - AddictionHelp.com",
+		"href": "https://www.addictionhelp.com/social-media-addiction/"
+	},
+	{
+		"resourceTitle": "Social Media Addiction Help - RightStep",
+		"href": "https://www.rightstep.com/rehab-blog/social-media-addiction-help/"
+	},
+	{
+		"resourceTitle": "Social Media Addiction Help - Foothills",
+		"href": "https://www.foothillsatredoak.com/adolescent-treatment-center-nc/process-addiction-treatment-center/social-media-addiction-treatment-center/"
+	},
+	{
+		"resourceTitle": "Social Media Addiction Help - Omega Recovery",
+		"href": "https://omegarecovery.org/social-media-addiction-help-329298/"
+	}
+];
+
+function factDisplay() {
 	let mainSection = document.getElementById('mainSection');
 
 	let counter = 0; 
@@ -61,5 +92,38 @@ function mainDisplay() {
 	}
 }
 
-mainDisplay(); 
+function resourceDisplay() {
+	let resourceSection = document.getElementById('resourceSection');
+
+	for(let resource of resourceJSON) {
+		let eachResource = document.createElement('div');
+
+		let resTitle = document.createElement('a');
+		resTitle.className = 'hover-3';
+		resTitle.setAttribute('href', resource.href);
+		resTitle.setAttribute('target', '_blank');
+		resTitle.textContent = resource.resourceTitle;
+	    eachResource.appendChild(resTitle);
+
+	    resourceSection.append(eachResource);
+	}
+}
+
+factDisplay(); 
+resourceDisplay();
+
 AOS.init();
+
+$(document).ready(function () {
+  $('.sectiontitle').tilt({
+    scale: 1.1,
+    glare: true
+  });
+});
+
+$(document).ready(function () {
+  $('.resourcesectiontitle').tilt({
+    scale: 1.5,
+    glare: true
+  });
+});

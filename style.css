@@ -7,11 +7,16 @@ body {
 	background-size: cover;
 }
 
-.maintitle {
+.sectiontitle {
 	text-align: center;
 	font-size: 7vw;
 	text-decoration: underline;
-	padding-bottom: 10vh;
+}
+
+.resourcesectiontitle {
+	text-align: center;
+	font-size: 7vw;
+	text-decoration: underline;
 }
 
 .title {
@@ -35,3 +40,39 @@ body {
 	padding-left: 48vw;
 	padding-bottom: 5vh;
 }
+
+.resourcecontainer {
+	display: flex;
+	flex-direction: column;
+	padding-left: 7.5vw;
+}
+
+.resourcetitle {
+	text-align: center;
+	font-size: 4vw;
+	text-decoration: none;
+	color: black;
+}
+
+/* Credit: https://codepen.io/t_afif/pen/poawLeQ */
+.hover-3 {
+  --b: 0.1em;   /* the thickness of the line */
+  --c: #1095c1; /* the color */
+  
+  color: #0000;
+  padding-block: var(--b);
+  text-align: center;
+  font-size: 4vw;
+  background: 
+    linear-gradient(var(--c) 50%,#000 0) 0% calc(100% - var(--_p,0%))/100% 200%,
+    linear-gradient(var(--c) 0 0) 0% var(--_p,0%)/var(--_p,0%) var(--b) no-repeat;
+  -webkit-background-clip: text,padding-box;
+          background-clip: text,padding-box;
+  transition: .3s var(--_s,0s) linear,background-size .3s calc(.3s - var(--_s,0s));
+}
+
+.hover-3:hover {
+  --_p: 100%;
+  --_s: .3s;
+}
+
